@@ -1,9 +1,10 @@
 Momentum App
 ===============
 1. The App is on spring boot 2
-2. Url to swagger ui is http://localhost:8080/swagger-ui.html#/product-resource
-3. On start up the App will populate one customer on customer table.
-4. To populate the product list you hit populate (/product/populate) resource service on the swagger ui, the service take integer as in input to specify how many products to be created,
+2. It uses in memory database H2 and is at ddl-auto = create, therefore when restarted the data from databases disapears, new data again will need to be populate via the REST resource service (http://localhost:8080/swagger-ui.html#!/product-resource/loadDataUsingPOST) on swagger.
+3. Url to swagger ui is http://localhost:8080/swagger-ui.html#/product-resource
+4. On start up the App will populate one customer on customer table.
+5. To populate the product list you hit populate (/product/populate) resource service on the swagger ui, the service take integer as in input to specify how many products to be created,
 after populating the data you can use the viewAll (/product/viewAl) resource to see the populated products.
 
 4. The default customer get created on start up and it has the number of points by default. 
